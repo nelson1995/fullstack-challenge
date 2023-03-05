@@ -20,3 +20,6 @@ Route::get('/', function () {
         'users' => \App\Models\User::all(),
     ]);
 });
+
+Route::get('/users-weather-forecast','WeatherForecastController@getAllUsersWeatherForecasts');
+Route::get('/weather-forecast/details/{userId}','WeatherForecastController@weatherForecastDetails');
